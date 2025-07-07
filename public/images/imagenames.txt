@@ -1,0 +1,6 @@
+
+ images/ubuntu-logo.png  
+ images/visa-logo.png  
+ images/paypal-logo.png  
+ images/mpesa-logo.png  
+ images/mastercard-logo.png  
