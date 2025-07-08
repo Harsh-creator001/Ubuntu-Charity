@@ -161,7 +161,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-4 text-ubuntu-dark-brown">Payment Methods</h3>
+            <h3 className="font-bold text-lg mb-4 text-ubuntu-dark-brown">Donation Methods</h3>
             <PaymentMethodsDisplay showLabels size="medium" className="mb-6" />
 
             <h3 className="font-bold text-lg mb-4 text-ubuntu-dark-brown">Legal</h3>

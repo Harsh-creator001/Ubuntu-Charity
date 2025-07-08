@@ -6,6 +6,8 @@ import { Users, Globe, ArrowRight, Calendar, MapPin } from "lucide-react"
 import { MainNav } from "@/components/main-nav"
 import { MissionVisionSlider } from "@/components/mission-vision-slider"
 import { Logo } from "@/components/logo"
+import { HerosSlider } from "@/components/heros-slider"
+
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
       <MainNav />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative">
+        {/* <section className="relative">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <div className="relative h-[600px]">
             <Image
@@ -48,7 +50,10 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {/* heros slider  */}
+        <HerosSlider/>
 
         {/* Mission, Vision, and Core Values Slider */}
         <MissionVisionSlider />
