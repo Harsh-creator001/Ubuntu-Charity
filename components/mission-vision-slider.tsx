@@ -14,9 +14,9 @@ const slides = [
     id: "mission",
     title: "Our Mission",
     content:
-      'Ubuntu Charity Foundation is guided by the African philosophy of Ubuntu – "I am because we are." We believe in the interconnectedness of humanity and work to create a world where everyone has access to education, healthcare, and economic opportunities.',
-    description:
-      "Through sustainable development programs and community-led initiatives, we empower individuals to break the cycle of poverty and build a better future for themselves and their communities.",
+    "To foster a sense of community and shared humanity, promoting sustainable development and social equity as inspired by the spirit of Ubuntu ",
+    // description:
+    //   "Through sustainable development programs and community-led initiatives, we empower individuals to break the cycle of poverty and build a better future for themselves and their communities.",
     image: "/images/slide1.jpg",
     alt: "Community members working together",
   },
@@ -24,9 +24,9 @@ const slides = [
     id: "vision",
     title: "Our Vision",
     content:
-      "We envision a world where every person has the opportunity to live with dignity, access basic needs, and realize their full potential regardless of where they were born.",
-    description:
-      "By fostering sustainable development and community empowerment, we aim to create lasting change that transforms lives and communities for generations to come.",
+      "To create a resilient and empowered community driven by the spirit of Ubuntu, fostering unity, compassion and sustainable development. ",
+    // description:
+      // "By fostering sustainable development and community empowerment, we aim to create lasting change that transforms lives and communities for generations to come.",
     image: "/images/slide2.jpg",
     alt: "Children in a classroom",
   },
@@ -34,9 +34,9 @@ const slides = [
     id: "values",
     title: "Core Values",
     content:
-      "Our work is guided by core values that reflect the spirit of Ubuntu: compassion, integrity, respect, accountability, and innovation.",
-    description:
-      "We believe in working collaboratively with communities, respecting local knowledge and culture, and maintaining the highest standards of transparency and accountability in all our operations.",
+      "Our work is guided by core values that reflect the spirit of Ubuntu: Inclusivity, Inspiration and Hope",
+    //description:
+      //"We believe in working collaboratively with communities, respecting local knowledge and culture, and maintaining the highest standards of transparency and accountability in all our operations.",
     image: "/images/slide3.jpg",
     alt: "Team working together",
   },
@@ -125,8 +125,8 @@ export function MissionVisionSlider() {
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-ubuntu-dark-brown">
                 {slides[currentSlide].title}
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">{slides[currentSlide].content}</p>
-              <p className="text-lg text-muted-foreground mb-8">{slides[currentSlide].description}</p>
+              <p className="text-lg text-muted-foreground mb-8">{slides[currentSlide].content}</p>
+              {/* <p className="text-lg text-muted-foreground mb-8">{slides[currentSlide].description}</p> */}
               <Button
                 variant="outline"
                 className="group border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"
