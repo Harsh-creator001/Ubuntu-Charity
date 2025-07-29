@@ -12,7 +12,7 @@ const galleryItems = [
     id: 1,
     title: "Syengoni Visit",
     description: "A visit to Syengoni School for mentorship and support",
-    image: "/images/SyengoniVisit.jpg",
+    image: "/images/SyengoniVisit.jpg", 
     category: "Mentorship",
     link: "https://photos.google.com/share/AF1QipPZPD4KtXchwjl6BHu2a3zEQScz3M3CxL0e0pH7bMCyOP7sTmC_1sB_ayK-ZeYNQw?key=T2EyYnlIUWpWaER0TlE3ZWRsNWVPaXRFNFZWdG5R",
   },
