@@ -4,70 +4,74 @@ import Link from "next/link"
 import Image from "next/image"
 import { MainNav } from "@/components/main-nav"
 import { motion } from "framer-motion"
+import { link } from "fs"
 
 // This would be replaced with actual gallery data from your CMS or database
 const galleryItems = [
   {
     id: 1,
-    title: "School Building Project",
-    description: "Construction of a new school in rural Tanzania",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Education",
+    title: "Syengoni Visit",
+    description: "A visit to Syengoni School for mentorship and support",
+    image: "/images/syengoniVisit.jpg",
+    category: "Mentorship",
+    link: "https://photos.google.com/share/AF1QipPZPD4KtXchwjl6BHu2a3zEQScz3M3CxL0e0pH7bMCyOP7sTmC_1sB_ayK-ZeYNQw?key=T2EyYnlIUWpWaER0TlE3ZWRsNWVPaXRFNFZWdG5R",
   },
   {
     id: 2,
-    title: "Healthcare Outreach",
-    description: "Mobile clinic providing healthcare services in Kenya",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Healthcare",
+    title: "2023 December Children's home visit",
+    description: "On this celebration month of december we visited a children's home to spread joy while sharing meals, playing games, and providing gifts to the children.",
+    image: "/images/mealsprep.jpg",
+    category: "CHildren's Welfare",
+    link: "https://photos.google.com/share/AF1QipMPNlz1bYa3nw848zD3zaaIV4pjzwX32NEVp95iMbhgk02aLwh9Emilxy03f1bXUg?key=dFdFVWFxaTY5TzVLVmtXVEM3S3BBazBDemprMzhR",
   },
   {
     id: 3,
-    title: "Clean Water Initiative",
-    description: "Installing water purification systems in rural communities",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Water",
+    title: "Members Hike",
+    description: "A team-building hike to promote wellness and camaraderie. On this hike we had a chance to bond, share ideas, and enjoy nature together.",
+    image: "/images/hike.jpg",
+    category: "Members Activities",
+    link: "https://photos.google.com/share/AF1QipOcdYDWWq7MKEF99qc53zP5CmPbWDzj3VUVvMzUMs_pnHhTG8lLJcb84NB91u7NIQ?key=TDlaMnVJcW5YbjJaNUMtcFBneXZWd2cxb2VIR093",
   },
   {
     id: 4,
-    title: "Vocational Training",
+    title: "Members Philanthropy",
     description: "Teaching valuable skills to empower community members",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/g1.jpg",
     category: "Economic Empowerment",
   },
   {
     id: 5,
-    title: "Agricultural Program",
+    title: "Members Philanthropy",
     description: "Sustainable farming techniques for local farmers",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/IMG-20240818-WA0145.jpg",
     category: "Agriculture",
   },
   {
     id: 6,
-    title: "Women's Empowerment",
+    title: "Members Philanthropy",
     description: "Supporting women entrepreneurs with microloans",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/g2.jpg",
     category: "Economic Empowerment",
   },
   {
     id: 7,
     title: "Youth Leadership Camp",
     description: "Developing future leaders through mentorship and training",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/g3.jpg",
     category: "Education",
   },
   {
     id: 8,
     title: "Community Center",
     description: "Building a gathering place for community activities",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/g10.jpg",
     category: "Infrastructure",
   },
   {
     id: 9,
     title: "Solar Power Project",
     description: "Bringing renewable energy to off-grid communities",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/g11.jpg",
     category: "Energy",
   },
 ]
@@ -102,6 +106,13 @@ export default function GalleryPage() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleryItems.map((item, index) => (
+              <a
+                  key={item.id}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-lg block"
+                >
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -126,6 +137,7 @@ export default function GalleryPage() {
                     <p className="text-sm text-white/90">{item.description}</p>
                   </div>
                 </motion.div>
+              </a>
               ))}
             </div>
           </div>

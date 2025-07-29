@@ -118,8 +118,9 @@ export default function Home() {
                 Our Programs
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                We focus on sustainable development through education, healthcare, economic empowerment, and
-                environmental conservation.
+                  "At Ubuntu Charity Foundation, we believe in shared humanity and collective upliftment.
+                  Our programs empower communities through education, health, and mentorship.
+                  Together, we rise by lifting others."   
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -127,16 +128,16 @@ export default function Home() {
                 <div className="relative h-48">
                   <Image
                     src="/placeholder.svg?height=200&width=400"
-                    alt="Education program"
+                    alt="Children Home visit."
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-ubuntu-dark-brown">Education For All</h3>
+                  <h3 className="text-xl font-bold mb-2 text-ubuntu-dark-brown">Inua Dada Initiative</h3>
                   <p className="text-muted-foreground mb-4">
-                    Providing access to quality education for children in underserved communities through school
-                    building, teacher training, and scholarship programs.
+                      Through the Inua Dada Initiative, Ubuntu members visited a school to support and uplift young girls by donating sanitary pads and offering mentorship. 
+                      We aim to restore dignity, boost confidence, and inspire hope—one girl at a time.
                   </p>
                   <Link
                     href="/programs/education"
