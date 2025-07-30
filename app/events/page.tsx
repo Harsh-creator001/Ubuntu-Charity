@@ -9,14 +9,14 @@ import { Calendar, MapPin, Clock, Users, Heart } from "lucide-react"
 const events = [
   {
     id: 1,
-    title: "Annual Fundraising Gala",
-    date: "Jun 15, 2023",
+    title: "Ubuntu Meet-UP Gala",
+    date: "August 16th, 2025",
     time: "6:00 PM - 10:00 PM",
-    location: "Grand Hotel, New York City",
-    image: "/placeholder.svg?height=200&width=400",
+    location: "Viewpoint Resort, Mbui Nzau Road",
+    image: "/images/Ubuntu-meetup.jpg?height=200&width=400",
     description:
-      "Join us for an evening of inspiration, entertainment, and giving as we celebrate our impact and raise funds for future initiatives.",
-    attendees: 250,
+      "🔥 YO UBUNTU FAMILY 🔥It’s going down on AUGUST 16TH , and you better be there! We’re pulling up at Viewpoint Resort, Mbui Nzau for a day full of vibes, vision reflection, and pure energy💥",
+    attendees: "All Ubuntu Family Members and partners are welcome to join us for this epic event! 🎉",
   },
   {
     id: 2,
@@ -123,7 +123,7 @@ export default function EventsPage() {
                         <Clock className="h-4 w-4 mr-2 text-primary" />
                         <span>{event.time}</span>
                       </div>
-                      {event.attendees > 0 && (
+                      {Number(event.attendees) > 0 && (
                         <div className="flex items-center">
                           <Users className="h-4 w-4 mr-2 text-primary" />
                           <span>{event.attendees} Attendees</span>
