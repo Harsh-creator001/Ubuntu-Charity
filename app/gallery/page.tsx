@@ -86,7 +86,7 @@ export default function GalleryPage() {
           <div className="absolute inset-0 bg-black/50 z-10" />
           <div className="relative h-[300px]">
             <Image
-              src="/placeholder.svg?height=300&width=1920"
+              src="/images/g6.jpg"
               alt="Gallery of our work"
               fill
               className="object-cover"
