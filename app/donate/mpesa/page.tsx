@@ -67,7 +67,7 @@ export default function MpesaDonatePage() {
                   <div className="mb-6">
                     <PaymentMethodsDisplay showLabels size="medium" />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-x-2 flex  ">
                     <Button
                       variant="outline"
                       className="w-full justify-start border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"

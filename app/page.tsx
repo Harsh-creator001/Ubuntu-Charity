@@ -7,6 +7,8 @@ import { MainNav } from "@/components/main-nav"
 import { MissionVisionSlider } from "@/components/mission-vision-slider"
 import { Logo } from "@/components/logo"
 import { HerosSlider } from "@/components/heros-slider"
+import EventsPage from "./events/page"
+import EventsSection from "@/components/events"
 
 
 export default function Home() {
@@ -302,121 +304,25 @@ export default function Home() {
         </section>
 
         {/* Upcoming Events */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-5 md:py-12 bg-muted/30">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-16 text-ubuntu-dark-brown">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-center text-ubuntu-dark-brown">
               Upcoming Events
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="border-ubuntu-light-brown/20">
-                <CardContent className="p-0">
-                  <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=200&width=400"
-                      alt="Fundraising gala"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-ubuntu-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Jun 15, 2023
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-ubuntu-dark-brown">Annual Fundraising Gala</h3>
-                    <div className="flex items-center text-muted-foreground mb-4">
-                      <MapPin className="h-4 w-4 mr-2 text-ubuntu-red" />
-                      <span>Grand Hotel, New York City</span>
-                    </div>
-                    <p className="text-muted-foreground mb-4">
-                      Join us for an evening of inspiration, entertainment, and giving as we celebrate our impact and
-                      raise funds for future initiatives.
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="w-full border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"
-                    >
-                      Register Now
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-ubuntu-light-brown/20">
-                <CardContent className="p-0">
-                  <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=200&width=400"
-                      alt="Volunteer day"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-ubuntu-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Jul 8, 2023
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-ubuntu-dark-brown">Community Volunteer Day</h3>
-                    <div className="flex items-center text-muted-foreground mb-4">
-                      <MapPin className="h-4 w-4 mr-2 text-ubuntu-red" />
-                      <span>Central Park, Chicago</span>
-                    </div>
-                    <p className="text-muted-foreground mb-4">
-                      Roll up your sleeves and make a difference! Join us for a day of community service projects that
-                      will help local families in need.
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="w-full border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"
-                    >
-                      Sign Up
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-ubuntu-light-brown/20">
-                <CardContent className="p-0">
-                  <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=200&width=400"
-                      alt="Charity run"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-ubuntu-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Aug 20, 2023
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-ubuntu-dark-brown">Ubuntu Charity 5K Run</h3>
-                    <div className="flex items-center text-muted-foreground mb-4">
-                      <MapPin className="h-4 w-4 mr-2 text-ubuntu-red" />
-                      <span>Riverside Park, San Francisco</span>
-                    </div>
-                    <p className="text-muted-foreground mb-4">
-                      Run for a cause! Participate in our annual 5K to raise awareness and funds for clean water
-                      projects in rural communities.
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="w-full border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"
-                    >
-                      Register
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="text-center mt-12">
+            <EventsSection />
+            <div className="text-center mt-1s">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-ubuntu-brown text-ubuntu-brown hover:bg-ubuntu-brown hover:text-white"
                 asChild
               >
-                <Link href="/events">View All Events</Link>
+                <Link href="/events">View All Events </Link>
               </Button>
             </div>
           </div>
         </section>
+
 
         {/* CTA Section */}
         <section className="py-16 md:py-24">

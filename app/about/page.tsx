@@ -287,7 +287,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center mt-12">
               <Button variant="outline" size="lg">
-                Meet Our Full Team
+                <Link href="/blog">Meet Our Full Team</Link>
               </Button>
             </div>
           </div>

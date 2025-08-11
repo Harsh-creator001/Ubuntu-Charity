@@ -4,6 +4,7 @@ import React from 'react'
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import{ motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -16,12 +17,13 @@ const slides = [
     title:"Humanity Towards All",
     content:"Join us in our mission to create sustainable change and empower communities across the globe.",
     image:"/images/slide1.jpg",
+    href: "/placeholder",
     alt:"I am because we are",
    },
    {
     id: "pillar1",
     title:"Special Thanks,",
-    content:"Special thanks to ..... who have been part an percel of our programs by donating",
+    content:"Special thanks to Levon Bakers who have been part an percel of our programs by donating delicious cakes",
     image:"/images/partners.jpg" ,
     alt:"United for a change",
    },
@@ -105,7 +107,7 @@ export function HerosSlider() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}>
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-20" />
         <div className="relative">
             <AnimatePresence mode='wait'>
                 <motion.div
@@ -139,11 +141,49 @@ export function HerosSlider() {
                         <p className="mt-6 max-w-2xl text-lg sm:text-xl">
                             {slides[currentSlide].content}
                         </p>
+                        {/* <div className="z-45 mt-10 flex flex-col sm:flex-row gap-4">
+                          
+                          <Button
+                            size="lg"
+                            className="cursor-pointer rounded-full text-lg px-8 bg-ubuntu-red hover:bg-ubuntu-red/90 text-white"
+                            asChild
+                          >
+                            <Link href="/donate/mpesa">Donate Now</Link>
+                          </Button>
+                          <Button
+                            size="lg"
+                            variant="outline"
+                            className="rounded-full text-lg px-8 bg-transparent text-white border-white hover:bg-white hover:text-ubuntu-dark-brown"
+                          >
+                            Learn More
+                          </Button>
+                        </div> */}
                 
                 </motion.div>
             </AnimatePresence> 
+            {/* <a
+              key={slides[currentSlide].id}
+              href={slides[currentSlide].href}>
+              <AnimatePresence mode='wait'>
+                <motion.div
+                    key={slides[currentSlide].id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="container absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white">
+                      <Button
+                        size="lg"
+                        className="rounded-full text-lg px-8 bg-ubuntu-red hover:bg-ubuntu-red/90 text-white z-auto"
+                        asChild>
+                          Donate
+                      </Button>
+                </motion.div>    
+
+              </AnimatePresence>
+            </a> */}
             {/* Navigation arrows */}
-            <div className="absolute inset-0 flex items-center justify-between p-4  z-99">
+            <div className="absolute inset-0 flex items-center justify-between p-4 z-40">
                 <Button
                 variant="ghost"
                 size="icon"

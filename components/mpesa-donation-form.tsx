@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { initiateSTKPush } from "@/app/actions/mpesa-actions"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react"
+import Image from "next/image"
 
 // Form schema
 const formSchema = z.object({
@@ -89,7 +90,7 @@ export function MpesaDonationForm() {
     }
   }
   return (
-    <div>
+    <div className="flex flex-col h-auto w-200 items-center">
       {response && (
         <Alert variant={response.success ? "default" : "destructive"} className="mb-6 color bg-green-200 delay-5">
           {response.success ? <CheckCircle2 className="h-4 w-4 " /> : <AlertCircle className="h-4 w-4" />}
@@ -97,9 +98,8 @@ export function MpesaDonationForm() {
           <AlertDescription>{response.message}</AlertDescription>
         </Alert>
       )}
-
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-muted/30 p-2 rounded-xl">
           <FormField
             control={form.control}
             name="name"
@@ -107,7 +107,7 @@ export function MpesaDonationForm() {
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="Enter Fullname" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -121,7 +121,7 @@ export function MpesaDonationForm() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="john.doe@example.com" type="email" {...field} />
+                  <Input placeholder="xyz@example.com" type="email" {...field} />
                 </FormControl>
                 <FormDescription>We'll send your donation receipt to this email.</FormDescription>
                 <FormMessage />
