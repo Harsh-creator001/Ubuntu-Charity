@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 import { MainNav } from "@/components/main-nav";
+import { Card } from "@/components/ui/card";
+import { id } from "date-fns/locale";
 
 // blog posts from Executive Members
 const blogs = [
@@ -18,7 +20,7 @@ const blogs = [
         title:"Chairman/Founder, Ubuntu Charity Foundation",
         content:"Leadership is not about position, it's about impact. At Ubuntu Charity Foundation, we stand as a beacon of hope, not just by offering aid, but by igniting purpose in every life we touch. Our mission is simple yet powerful: to serve with integrity, to lead with compassion, and to inspire a generation that uplifts others as it rises. Together, we are not just changing stories  we are rewriting destinies.",
         image:"/images/slide1.jpg",
-        alt:""
+        alt:"Founder"
     },
     {
         id:2,
@@ -26,31 +28,31 @@ const blogs = [
         title:"Vice Chair",
         content:"Lorem Ipsuim",
         image:"/images/slide2.jpg",
-        alt:""
+        alt:"Vice"
     },
-        {
+    {
         id:3,
         name:"Bernard Mbaika",
         title:"Treasurer, Ubuntu Charity Foundation",
         content:"Salute to us all. Fundraising is the gentle art of teaching the joy of giving. Under the spirit of togetherness, we keep it high to make a smile on each and every face around us. Through our mission, vision and key responsibilities under the club's constitution guiding us, we will see a success to our goals.To our donors, well-wishers and all our supporters not forgetting our group members who have been with us till the start, we are a family. To the big, united family, as we work to create light for others, we naturally light our own way. Giving does not only preceed receiving; it is the reason for it. It is in giving that we receive and God always blesses a cheerful giver. All I can say is thank you very much and let unity be our mover. May God bless you all.",
         image:"/images/slide3.jpg",
-        alt:""
+        alt:"Treasurer"
     },
-        {
+    {
         id:4,
         name:"Muoki Anna",
         title:"Secretary, Ubuntu Charity Foundation",
         content:"I am deeply committed to the spirit of Ubuntu — I am because we are.This principle guides every step we take in uplifting the lives of the vulnerable in our communities.Our mission is rooted in compassion, unity, and action. We believe that real change begins when people come together to serve a cause greater than themselves. Through our visits to children’s homes, donations, mentorship programs, and community outreach, we aim to bring hope, dignity, and opportunity to those who need it most.Leadership, to me, is not about position — it's about responsibility. It's about inspiring others to care, to act, and to believe in a better tomorrow. I am humbled to walk this journey with dedicated volunteers and supporters who share in this vision.Together, we are building more than a charity — we are nurturing a family where love leads, and every act of kindness becomes a foundation for the future.",
         image:"/images/slide4.jpg",
-        alt:""
+        alt:"Secretary"
     },
-        {
+    {
         id:5,
         name:"Purity Kimotho",
         title:"Organizing Sectretary, Ubuntu Charity Foundation",
         content:"It starts with attention to details ,commitment to creativity and passion for  collaboration.As secretaries we are often the backbone of our teams. As ubuntu charity foundation we provide critical support in ensuring that every logistical details is in place .",
         image:"/images/slide5.jpg",
-        alt:""
+        alt:"Org Sec"
     },
 
 ]
@@ -131,22 +133,26 @@ export default function BlogPage(){
         >
          
             <div className="container">
-                <div className="flex ">
-                    <div className=  "relative w-[100px] h-[100px] overflow-hidden justify-between mt-0.5 space-x-2">
-                        {blogs.map((item, image) =>(
-                            <Image
-                            key={item.image}
-                            src={blogs[currentSlide].image || "/placeholder.svg"}
-                            alt={blogs[currentSlide].alt}
-                            fill
-                            onClick={() => goToSlide(image)}
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    
-                            />
-            
-                        ))} 
+                <div className="flex flex-row items-center gap-3 mb-6">
+                    {blogs.map((blog, index) => (
+                        <Card key={blog.id} className={cn("overflow-hidden rounded-md", currentSlide === index ? "border-card border-green-500 ":"")}
+                        >
+                            <div className= {cn(
+                                "relative w-[80px] h-[80px] transition-all overflow-hidden justify-between space-x-2 duration-300",
+                                currentSlide === index ? "w-[100px] h-[100px]":""
 
-                    </div>
+                            )}>
+                                <Image
+                                    src={blog.image || "/placeholder.svg"}
+                                    alt={blog.name}
+                                    fill
+                                    onClick={() => goToSlide(index)}
+                                    className= " object-cover rounded-md cursor-pointer"
+                                />
+                            </div>
+                        </Card>
+                    ))}
+                    
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <AnimatePresence mode="wait">
@@ -157,18 +163,17 @@ export default function BlogPage(){
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.5 }}
                         >
-                        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-1 text-ubuntu-dark-brown">
+                        <h1 className="text-3xl font-bold tracking-tight sm:text-3xl mb-1 text-ubuntu-dark-brown">
                             {blogs[currentSlide].name}
                         </h1>
                         <h2 className="text-2xl font-light italic tracking-tight sm:text-2xl mb-6 text-ubuntu-dark-brown">
                             {blogs[currentSlide].title}
                         </h2>
-                        <p className="text-lg text-muted-foreground mb-8">{blogs[currentSlide].content}</p>
+                        <p className="text-md text-justify text-muted-foreground mb-8">{blogs[currentSlide].content}</p>
                         {/* <p className="text-lg text-muted-foreground mb-8">{blogs[currentSlide].description}</p> */}
 
                         </motion.div>
                     </AnimatePresence>
-
                     <div className="relative">
                         <AnimatePresence mode="wait">
                         <motion.div
@@ -193,7 +198,7 @@ export default function BlogPage(){
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="h-10 w-10 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background/90 text-ubuntu-red"
+                                className="h-10 w-10 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background/90 text-ubuntu-red "
                                 onClick={prevSlide}
                                 aria-label="Previous slide"
                             >

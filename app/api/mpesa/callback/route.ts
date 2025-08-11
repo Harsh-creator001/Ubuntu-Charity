@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     // This is where you would update your database with the transaction status
     // The structure of callbackData depends on the M-Pesa API version you're using
 
-    // Example structure for STK callback:
+    // structure for STK callback:
     // {
     //   Body: {
     //     stkCallback: {
