@@ -19,15 +19,15 @@ const blogs = [
         name:"Onesmus Wambua",
         title:"Chairman/Founder, Ubuntu Charity Foundation",
         content:"Leadership is not about position, it's about impact. At Ubuntu Charity Foundation, we stand as a beacon of hope, not just by offering aid, but by igniting purpose in every life we touch. Our mission is simple yet powerful: to serve with integrity, to lead with compassion, and to inspire a generation that uplifts others as it rises. Together, we are not just changing stories  we are rewriting destinies.",
-        image:"/images/slide1.jpg",
+        image:"/images/founder.jpg",
         alt:"Founder"
     },
     {
         id:2,
         name:"Ann Makau",
         title:"Vice Chair",
-        content:"Lorem Ipsuim",
-        image:"/images/slide2.jpg",
+        content:"Ubuntu Charity Foundation is not just a charity; it is a movement that embodies the spirit of togetherness and compassion. As the Vice Chair, I am honored to be part of a team that believes in the power of unity to create lasting change. Our mission is to uplift the vulnerable, empower communities, and inspire hope through our actions. Together, we are building a brighter future where every individual has the opportunity to thrive.",
+        image:"/images/vice.jpg",
         alt:"Vice"
     },
     {
@@ -35,7 +35,7 @@ const blogs = [
         name:"Bernard Mbaika",
         title:"Treasurer, Ubuntu Charity Foundation",
         content:"Salute to us all. Fundraising is the gentle art of teaching the joy of giving. Under the spirit of togetherness, we keep it high to make a smile on each and every face around us. Through our mission, vision and key responsibilities under the club's constitution guiding us, we will see a success to our goals.To our donors, well-wishers and all our supporters not forgetting our group members who have been with us till the start, we are a family. To the big, united family, as we work to create light for others, we naturally light our own way. Giving does not only preceed receiving; it is the reason for it. It is in giving that we receive and God always blesses a cheerful giver. All I can say is thank you very much and let unity be our mover. May God bless you all.",
-        image:"/images/slide3.jpg",
+        image:"/images/treasurer.jpg",
         alt:"Treasurer"
     },
     {
@@ -43,7 +43,7 @@ const blogs = [
         name:"Muoki Anna",
         title:"Secretary, Ubuntu Charity Foundation",
         content:"I am deeply committed to the spirit of Ubuntu — I am because we are.This principle guides every step we take in uplifting the lives of the vulnerable in our communities.Our mission is rooted in compassion, unity, and action. We believe that real change begins when people come together to serve a cause greater than themselves. Through our visits to children’s homes, donations, mentorship programs, and community outreach, we aim to bring hope, dignity, and opportunity to those who need it most.Leadership, to me, is not about position — it's about responsibility. It's about inspiring others to care, to act, and to believe in a better tomorrow. I am humbled to walk this journey with dedicated volunteers and supporters who share in this vision.Together, we are building more than a charity — we are nurturing a family where love leads, and every act of kindness becomes a foundation for the future.",
-        image:"/images/slide4.jpg",
+        image:"/images/sec.jpg",
         alt:"Secretary"
     },
     {
@@ -51,10 +51,18 @@ const blogs = [
         name:"Purity Kimotho",
         title:"Organizing Sectretary, Ubuntu Charity Foundation",
         content:"It starts with attention to details ,commitment to creativity and passion for  collaboration.As secretaries we are often the backbone of our teams. As ubuntu charity foundation we provide critical support in ensuring that every logistical details is in place .",
-        image:"/images/slide5.jpg",
+        image:"/images/orgsec.jpg",
         alt:"Org Sec"
     },
 
+        {
+        id:6,
+        name:"Dennis Muuo",
+        title:"Outreach chair, Ubuntu Charity Foundation",
+        content:"Outreach is not just about giving; it's about connecting, understanding, and empowering. At Ubuntu Charity Foundation, we believe in the power of community and the strength that comes from working together to uplift those in need. Our outreach programs are designed to create lasting impact, fostering relationships that go beyond charity. We aim to inspire hope, ignite change, and build a brighter future for all.",
+        image:"/images/outreach.jpg",
+        alt:"Org Sec"
+    },
 ]
 
 export default function BlogPage(){
