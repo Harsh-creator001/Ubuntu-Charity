@@ -155,7 +155,7 @@ export default function BlogPage(){
                                     alt={blog.name}
                                     fill
                                     onClick={() => goToSlide(index)}
-                                    className= " object-cover object-[center_40%] rounded-md cursor-pointer"
+                                    className= " object-fit rounded-md cursor-pointer"
                                 />
                             </div>
                         </Card>
