@@ -24,7 +24,7 @@ const blogs = [
     },
     {
         id:2,
-        name:"Ann Makau",
+        name:"Elizabeth Mwende",
         title:"Vice Chair",
         content:"Ubuntu Charity Foundation is not just a charity; it is a movement that embodies the spirit of togetherness and compassion. As the Vice Chair, I am honored to be part of a team that believes in the power of unity to create lasting change. Our mission is to uplift the vulnerable, empower communities, and inspire hope through our actions. Together, we are building a brighter future where every individual has the opportunity to thrive.",
         image:"/images/vice.jpg",
@@ -155,7 +155,7 @@ export default function BlogPage(){
                                     alt={blog.name}
                                     fill
                                     onClick={() => goToSlide(index)}
-                                    className= " object-fit rounded-md cursor-pointer"
+                                    className= " object-cover rounded-md cursor-pointer"
                                 />
                             </div>
                         </Card>
