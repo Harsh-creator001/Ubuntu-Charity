@@ -190,13 +190,13 @@ export default function BlogPage(){
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="relative h-[400px] rounded-lg overflow-hidden"
+                            className="relative h-[400px] rounded-lg overflow-hidden bg-ubuntu-dark-brown/10"
                         >
                             <Image
                             src={blogs[currentSlide].image || "/placeholder.svg"}
                             alt={blogs[currentSlide].alt}
                             fill
-                            className="object-cover"
+                            className="object-scale-down rounded-l hover:scale-105 transition-transform duration-300"
                             />
                         </motion.div>
                         </AnimatePresence>
